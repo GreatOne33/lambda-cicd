@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  asepulvtestactions:
+  asepulvtestactions-25:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
@@ -24,5 +24,5 @@ Resources:
 Outputs:
   BucketName:
     Description: 'Name of created S3 Bucket'
-    Value: !Ref asepulvtestactions
+    Value: !Ref asepulvtestactions-25
 
