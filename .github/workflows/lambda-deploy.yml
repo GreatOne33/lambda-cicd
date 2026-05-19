@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'lambda/**'
+      - '.github/workflows/**'
 
 jobs:
   deploy-lambda:
@@ -35,5 +36,3 @@ jobs:
         cd lambda
         zip lambda.zip lambda_function.py
         aws lambda update-function-code --function-name ${{ secrets.AWS_LAMBDA_FUNCTION_NAME }} --zip-file fileb://lambda.zip
-
-  
